@@ -38,16 +38,20 @@ open class LoggingApplicationService: NSObject, ApplicationService {
 	}
 
 	open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-		Logger.shared = STCCocoaLumberjackLogger()
+		let logger = STCCocoaLumberjackLogger()
+		logger.logLevel = self.configuration.logLevel
+		Logger.shared = logger
 
 		DDLog.add(DDASLLogger.sharedInstance)
 		DDLog.add(DDTTYLogger.sharedInstance)
 
-		self.fileLogger = DDFileLogger()
-		self.fileLogger.maximumFileSize = self.configuration.logFileMaxSize
-		self.fileLogger.logFileManager.maximumNumberOfLogFiles = self.configuration.logFileMaxNumber
-		self.fileLogger.rollLogFile(withCompletion: nil)
-		DDLog.add(self.fileLogger)
+		if self.configuration.hasLogFiles {
+			self.fileLogger = DDFileLogger()
+			self.fileLogger.maximumFileSize = self.configuration.logFileMaxSize
+			self.fileLogger.logFileManager.maximumNumberOfLogFiles = self.configuration.logFileMaxNumber
+			self.fileLogger.rollLogFile(withCompletion: nil)
+			DDLog.add(self.fileLogger)
+		}
 
 		LogInfo("Logging has been setup")
 

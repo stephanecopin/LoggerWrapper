@@ -25,6 +25,7 @@
 //
 
 #import "STCLogger.h"
+#import "STCLogger+Subclass.h"
 
 @import Foundation;
 
@@ -54,6 +55,12 @@ static STCLogger * sharedLogger;
 }
 
 - (void)log:(STCLogFlag)flag module:(NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line message:(NSString *)message {
+	if(!!(self.logLevel & flag)) {
+		[self writeLog:flag module:module file:file function:function line:line message:message];
+	}
+}
+
+- (void)writeLog:(STCLogFlag)flag module:(NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line message:(NSString *)message {
 
 }
 

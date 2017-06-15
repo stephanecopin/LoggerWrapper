@@ -66,9 +66,11 @@ NS_REFINED_FOR_SWIFT
 
 @property (nonatomic, assign) STCLogLevel logLevel;
 
+// When writing your own subclass not override the methods below, override `-[STCLogger(Subclass) writeLog:module:file:function:line:message]` instead.
+// These method will take the current logLevel into account before writing the log message.
 - (void)log:(STCLogFlag)flag module:(nullable NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(6, 7);
-- (void)log:(STCLogFlag)flag module:(nullable NSString *)module  file:(NSString *)file function:(NSString *)function line:(int)line format:(NSString *)format arguments:(va_list)arguments;
-- (void)log:(STCLogFlag)flag module:(nullable NSString *)module  file:(NSString *)file function:(NSString *)function line:(int)line message:(NSString *)message;
+- (void)log:(STCLogFlag)flag module:(nullable NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line format:(NSString *)format arguments:(va_list)arguments;
+- (void)log:(STCLogFlag)flag module:(nullable NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line message:(NSString *)message;
 
 @property (class, nullable) STCLogger * sharedLogger;
 
@@ -93,12 +95,7 @@ NS_REFINED_FOR_SWIFT
 #define _TOSTRING(v) _TOSTRING_STEP2(v)
 
 #define _STCTryLog(flag, functionName, formatString, ...) \
-  do { \
-    STCLogger * logger = STCLogger.sharedLogger; \
-    if((logger.logLevel & (flag)) == (flag)) { \
-      [logger log:(flag) module:_TOSTRING(CURRENT_MODULE) file:[NSString stringWithUTF8String:__FILE__] function:(functionName) line:__LINE__ format:(formatString), ## __VA_ARGS__]; \
-    } \
-  } while(0)
+  [STCLogger.sharedLogger log:(flag) module:_TOSTRING(CURRENT_MODULE) file:[NSString stringWithUTF8String:__FILE__] function:(functionName) line:__LINE__ format:(formatString), ## __VA_ARGS__]
 
 #if !defined(LOGGERWRAPPER_DISABLE_LOGGING)
 #define STCLogC(flag, formatString, ...) _STCTryLog(flag, [NSString stringWithUTF8String:__func__], formatString, ## __VA_ARGS__)

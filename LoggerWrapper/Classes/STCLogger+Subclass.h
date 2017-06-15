@@ -1,5 +1,5 @@
 //
-//  STCCocoaLumberjackLogger.m
+//  STCLogger+Subclass.h
 //  LoggerWrapper
 //
 //  Created by Stephane Copin on 12/17/14.
@@ -24,22 +24,14 @@
 //  THE SOFTWARE.
 //
 
-@import CocoaLumberjack;
+#import "STCLogger.h"
 
-#import "STCLogger+Subclass.h"
-#import "STCCocoaLumberjackLogger.h"
-#import "STCCocoaLumberjackFormatter.h"
+NS_ASSUME_NONNULL_BEGIN
 
-@implementation STCCocoaLumberjackLogger
-@synthesize logLevel = _logLevel;
+@interface STCLogger (Subclass)
 
-+ (void)initialize {
-  [DDASLLogger sharedInstance].logFormatter = [[STCCocoaLumberjackFormatter alloc] init];
-  [DDTTYLogger sharedInstance].logFormatter = [DDASLLogger sharedInstance].logFormatter;
-}
-
-- (void)writeLog:(STCLogFlag)flag module:(NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line message:(NSString *)message {
-	[DDLog log:NO level:(int)self.logLevel flag:(DDLogFlag)flag context:INT_MAX file:[file UTF8String] function:[function UTF8String] line:line tag:module format:@"%@", message];
-}
+- (void)writeLog:(STCLogFlag)flag module:(nullable NSString *)module  file:(NSString *)file function:(NSString *)function line:(int)line message:(NSString *)message;
 
 @end
+
+NS_ASSUME_NONNULL_END
