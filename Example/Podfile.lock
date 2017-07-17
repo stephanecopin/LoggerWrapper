@@ -2,14 +2,14 @@ PODS:
   - CocoaLumberjack/Default (3.2.0)
   - CocoaLumberjack/Swift (3.2.0):
     - CocoaLumberjack/Default
-  - LoggerWrapper/CocoaLumberjack/PluggableApplicationDelegate (0.1.1):
+  - LoggerWrapper/CocoaLumberjack/PluggableApplicationDelegate (0.2):
     - LoggerWrapper/CocoaLumberjack/Swift
     - PluggableApplicationDelegate
-  - LoggerWrapper/CocoaLumberjack/Swift (0.1.1):
+  - LoggerWrapper/CocoaLumberjack/Swift (0.2):
     - CocoaLumberjack/Swift
     - LoggerWrapper/Swift
-  - LoggerWrapper/ObjC (0.1.1)
-  - LoggerWrapper/Swift (0.1.1):
+  - LoggerWrapper/ObjC (0.2)
+  - LoggerWrapper/Swift (0.2):
     - LoggerWrapper/ObjC
   - PluggableApplicationDelegate (0.2.0)
 
@@ -23,7 +23,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
-  LoggerWrapper: db23893ebd3c7f31427c529ea7653c45368dacc5
+  LoggerWrapper: d5f7d27b1b02ee5f4e27b8556b8414dfefb8f8c3
   PluggableApplicationDelegate: 6b55523e4adb5b4f55c97a2d3f107990656caa4a
 
 PODFILE CHECKSUM: e3395c36d8769bdcb403a05f5e517ac7236b24e9
