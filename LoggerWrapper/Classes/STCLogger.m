@@ -37,6 +37,7 @@ static STCLogger * sharedLogger;
 	self = [super init];
 	if (self != nil) {
 		_logLevel = STCLogLevelAll;
+		_modulesLogLevel = @{};
 	}
 	return self;
 }
@@ -55,7 +56,13 @@ static STCLogger * sharedLogger;
 }
 
 - (void)log:(STCLogFlag)flag module:(NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line message:(NSString *)message {
-	if(!!(self.logLevel & flag)) {
+	BOOL shouldLog;
+	if (module != nil && self.modulesLogLevel[module] != nil) {
+		shouldLog = !!(self.modulesLogLevel[module].integerValue & flag);
+	} else {
+		shouldLog = !!(self.logLevel & flag);
+	}
+	if (shouldLog) {
 		[self writeLog:flag module:module file:file function:function line:line message:message];
 	}
 }

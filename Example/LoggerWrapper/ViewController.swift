@@ -13,6 +13,11 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		LogDebug("View has loaded")
+		LogDebug("View has loaded", module: "Main");
+
+		Logger.shared?.modulesLogLevel = ["Main": [.info]]
+		LogDebug("View has loaded", module: "Main"); // Not displayed
+
+		LogInfo("View has loaded", module: "Main"); // Displayed
 	}
 }

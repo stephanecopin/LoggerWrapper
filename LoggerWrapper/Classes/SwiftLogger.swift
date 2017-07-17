@@ -31,6 +31,25 @@ public typealias Logger = __STCLogger
 public typealias LogFlag = STCLogFlag
 public typealias LogLevel = STCLogLevel
 
+extension Logger {
+	public var modulesLogLevel: [String: LogLevel] {
+		get {
+			var dictionary: [String: LogLevel] = [:]
+			for (key, value) in self.__modulesLogLevel {
+				dictionary[key] = LogLevel(rawValue: value.uintValue)
+			}
+			return dictionary
+		}
+		set {
+			var dictionary: [String: NSNumber] = [:]
+			for (key, value) in newValue {
+				dictionary[key] = NSNumber(value: value.rawValue)
+			}
+			self.__modulesLogLevel = dictionary
+		}
+	}
+}
+
 func Log(_ flag: LogFlag, module: String?, file: String, function: String, line: UInt, message: @autoclosure () -> String) {
 	if let logger = Logger.shared {
 		withVaList([message()]) { args in

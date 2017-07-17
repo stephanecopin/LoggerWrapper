@@ -66,6 +66,13 @@ NS_REFINED_FOR_SWIFT
 
 @property (nonatomic, assign) STCLogLevel logLevel;
 
+/**
+ *  You may use this property to specify specific log levels for "module" specified while logging.
+ *  If defined, the log level for that module will override the global log level for the logger.
+ *
+ */
+@property (nonatomic, copy) NSDictionary<NSString *, NSNumber *> * modulesLogLevel NS_REFINED_FOR_SWIFT;
+
 // When writing your own subclass not override the methods below, override `-[STCLogger(Subclass) writeLog:module:file:function:line:message]` instead.
 // These method will take the current logLevel into account before writing the log message.
 - (void)log:(STCLogFlag)flag module:(nullable NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(6, 7);
