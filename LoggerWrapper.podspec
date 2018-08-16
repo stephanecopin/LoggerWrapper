@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LoggerWrapper'
-  s.version          = '0.2'
+  s.version          = '0.3'
   s.summary          = 'A very simple library that aims to provide a simple wrapper around the various logging library that exists for iOS.'
 
   s.description      = <<-DESC
