@@ -1,15 +1,15 @@
 PODS:
-  - CocoaLumberjack/Default (3.2.0)
-  - CocoaLumberjack/Swift (3.2.0):
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Swift (3.4.2):
     - CocoaLumberjack/Default
-  - LoggerWrapper/CocoaLumberjack/PluggableApplicationDelegate (0.2):
+  - LoggerWrapper/CocoaLumberjack/PluggableApplicationDelegate (0.3):
     - LoggerWrapper/CocoaLumberjack/Swift
     - PluggableApplicationDelegate
-  - LoggerWrapper/CocoaLumberjack/Swift (0.2):
+  - LoggerWrapper/CocoaLumberjack/Swift (0.3):
     - CocoaLumberjack/Swift
     - LoggerWrapper/Swift
-  - LoggerWrapper/ObjC (0.2)
-  - LoggerWrapper/Swift (0.2):
+  - LoggerWrapper/ObjC (0.3)
+  - LoggerWrapper/Swift (0.3):
     - LoggerWrapper/ObjC
   - PluggableApplicationDelegate (0.2.0)
 
@@ -17,15 +17,20 @@ DEPENDENCIES:
   - LoggerWrapper/CocoaLumberjack/PluggableApplicationDelegate (from `../`)
   - PluggableApplicationDelegate
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
+    - PluggableApplicationDelegate
+
 EXTERNAL SOURCES:
   LoggerWrapper:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
-  LoggerWrapper: d5f7d27b1b02ee5f4e27b8556b8414dfefb8f8c3
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  LoggerWrapper: aed0278eea0a52ff51d859fbc946c7fa10547b5d
   PluggableApplicationDelegate: 6b55523e4adb5b4f55c97a2d3f107990656caa4a
 
-PODFILE CHECKSUM: e3395c36d8769bdcb403a05f5e517ac7236b24e9
+PODFILE CHECKSUM: e00f86bc237f765e42eadbf68db4377a8d7840e0
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

@@ -37,7 +37,7 @@ open class LoggingApplicationService: NSObject, ApplicationService {
 		self.configuration = configuration
 	}
 
-	open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+	open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 		let logger = STCCocoaLumberjackLogger()
 		logger.logLevel = self.configuration.logLevel
 		Logger.shared = logger
