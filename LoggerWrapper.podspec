@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://fueled.com/stephane'
 
   s.ios.deployment_target = '9.0'
+  s.macos.deployment_target = '10.9'
 	s.swift_version = '4.2'
 
 	s.default_subspec = 'ObjC'
