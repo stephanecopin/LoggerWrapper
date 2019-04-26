@@ -1,5 +1,5 @@
 //
-//  LoggingApplicationService.swift
+//  LoggingApplicationDelegate.swift
 //  Tamaggo
 //
 //  Created by Stéphane Copin on 5/15/17.
@@ -8,9 +8,8 @@
 
 import UIKit
 import CocoaLumberjack
-import PluggableApplicationDelegate
 
-open class LoggingApplicationService: NSObject, ApplicationService {
+open class LoggingApplicationDelegate: NSObject, UIApplicationDelegate {
 	private var fileLogger: DDFileLogger!
 
 	public struct Configuration {
@@ -62,9 +61,7 @@ open class LoggingApplicationService: NSObject, ApplicationService {
 
 	open func getLatestLogs(ofSize size: Int? = nil) -> String {
 		let description = NSMutableString()
-		let sortedLogFileInfos = self.fileLogger.logFileManager.sortedLogFileInfos ?? []
-
-		for logFileInfo in sortedLogFileInfos.reversed() {
+		for logFileInfo in self.fileLogger.logFileManager.sortedLogFileInfos.reversed() {
 			if let logData = FileManager.default.contents(atPath: logFileInfo.filePath), !logData.isEmpty,
 				let result = NSString(data: logData, encoding: String.Encoding.utf8.rawValue) as String? {
 				description.append(result)

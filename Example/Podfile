@@ -3,6 +3,5 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'LoggerWrapper_Example' do
-	pod 'PluggableApplicationDelegate'
-	pod 'LoggerWrapper/CocoaLumberjack/PluggableApplicationDelegate', :path => '../'
+	pod 'LoggerWrapper/CocoaLumberjack', :path => '../'
 end

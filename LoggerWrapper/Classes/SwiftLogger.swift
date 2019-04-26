@@ -59,27 +59,27 @@ func Log(_ flag: LogFlag, module: String?, file: String, function: String, line:
 }
 
 public func LogTrace(_ message: @autoclosure () -> String, module: String? = nil, file: String = #file, function: String = #function, line: UInt = #line) {
-	Log(.trace, module: module, file: file, function: function, line: line, message: message)
+	Log(.trace, module: module, file: file, function: function, line: line, message: message())
 }
 
 public func LogDebug(_ message: @autoclosure () -> String, module: String? = nil, file: String = #file, function: String = #function, line: UInt = #line) {
-	Log(.debug, module: module, file: file, function: function, line: line, message: message)
+	Log(.debug, module: module, file: file, function: function, line: line, message: message())
 }
 
 public func LogVerbose(_ message: @autoclosure () -> String, module: String? = nil, file: String = #file, function: String = #function, line: UInt = #line) {
-	Log(.verbose, module: module, file: file, function: function, line: line, message: message)
+	Log(.verbose, module: module, file: file, function: function, line: line, message: message())
 }
 
 public func LogInfo(_ message: @autoclosure () -> String, module: String? = nil, file: String = #file, function: String = #function, line: UInt = #line) {
-	Log(.info, module: module, file: file, function: function, line: line, message: message)
+	Log(.info, module: module, file: file, function: function, line: line, message: message())
 }
 
 public func LogWarning(_ message: @autoclosure () -> String, module: String? = nil, file: String = #file, function: String = #function, line: UInt = #line) {
-	Log(.warning, module: module, file: file, function: function, line: line, message: message)
+	Log(.warning, module: module, file: file, function: function, line: line, message: message())
 }
 
 public func LogError(_ message: @autoclosure () -> String, module: String? = nil, file: String = #file, function: String = #function, line: UInt = #line) {
-	Log(.error, module: module, file: file, function: function, line: line, message: message)
+	Log(.error, module: module, file: file, function: function, line: line, message: message())
 }
 
 public func LogFatal(_ message: String, module: String? = nil, file: String = #file, function: String = #function, line: UInt = #line) -> Never {

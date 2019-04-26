@@ -12,15 +12,15 @@ Pod::Spec.new do |s|
     can't be disabled easily.
                        DESC
 
-  s.homepage         = 'https://github.com/stephanecopin/LoggerWrapper'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'stephanecopin' => 'stephane.copin@live.fr' }
-  s.source           = { :git => 'https://github.com/stephanecopin/LoggerWrapper.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://fueled.com/stephane'
+	s.homepage         = 'https://github.com/stephanecopin/LoggerWrapper'
+	s.license          = { :type => 'MIT', :file => 'LICENSE' }
+	s.author           = { 'stephanecopin' => 'stephane.copin@live.fr' }
+	s.source           = { :git => 'https://github.com/stephanecopin/LoggerWrapper.git', :tag => s.version.to_s }
+	s.social_media_url = 'https://fueled.com/stephane'
 
-  s.ios.deployment_target = '9.0'
-  s.macos.deployment_target = '10.9'
-	s.swift_version = '4.2'
+	s.ios.deployment_target = '9.0'
+	s.macos.deployment_target = '10.9'
+	s.swift_version = '5.0'
 
 	s.default_subspec = 'ObjC'
  
@@ -46,10 +46,9 @@ Pod::Spec.new do |s|
 			css.source_files = 'LoggerWrapper/Classes/CocoaLumberjack/*.{h,m,swift}'
 		end
 
-		cs.subspec 'PluggableApplicationDelegate' do |css|
+		cs.subspec 'ApplicationDelegate' do |css|
 			css.dependency 'LoggerWrapper/CocoaLumberjack/Swift'
-			css.dependency 'PluggableApplicationDelegate'
-			css.source_files = 'LoggerWrapper/Classes/CocoaLumberjack/PluggableApplicationDelegate/**/*'
+			css.source_files = 'LoggerWrapper/Classes/CocoaLumberjack/ApplicationDelegate/**/*'
 		end
 	end
 end
