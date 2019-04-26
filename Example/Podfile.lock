@@ -4,20 +4,20 @@ PODS:
   - CocoaLumberjack/Core (3.5.3)
   - CocoaLumberjack/Swift (3.5.3):
     - CocoaLumberjack/Core
-  - LoggerWrapper/CocoaLumberjack (0.3):
-    - LoggerWrapper/CocoaLumberjack/ApplicationDelegate (= 0.3)
-    - LoggerWrapper/CocoaLumberjack/Core (= 0.3)
-    - LoggerWrapper/CocoaLumberjack/Swift (= 0.3)
-  - LoggerWrapper/CocoaLumberjack/ApplicationDelegate (0.3):
+  - LoggerWrapper/CocoaLumberjack (0.4):
+    - LoggerWrapper/CocoaLumberjack/ApplicationDelegate (= 0.4)
+    - LoggerWrapper/CocoaLumberjack/Core (= 0.4)
+    - LoggerWrapper/CocoaLumberjack/Swift (= 0.4)
+  - LoggerWrapper/CocoaLumberjack/ApplicationDelegate (0.4):
     - LoggerWrapper/CocoaLumberjack/Swift
-  - LoggerWrapper/CocoaLumberjack/Core (0.3):
+  - LoggerWrapper/CocoaLumberjack/Core (0.4):
     - CocoaLumberjack
     - LoggerWrapper/ObjC
-  - LoggerWrapper/CocoaLumberjack/Swift (0.3):
+  - LoggerWrapper/CocoaLumberjack/Swift (0.4):
     - CocoaLumberjack/Swift
     - LoggerWrapper/Swift
-  - LoggerWrapper/ObjC (0.3)
-  - LoggerWrapper/Swift (0.3):
+  - LoggerWrapper/ObjC (0.4)
+  - LoggerWrapper/Swift (0.4):
     - LoggerWrapper/ObjC
 
 DEPENDENCIES:
@@ -33,7 +33,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  LoggerWrapper: b0be3df99f6ca21fae3c6d6bfc37d0ef808c9a9b
+  LoggerWrapper: f27a494b75625c8bcaa3f4160373441e43e7d54e
 
 PODFILE CHECKSUM: 0f0c3f83fb56cc4b5c86b10ed40414916a112c7f
 
