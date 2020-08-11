@@ -1,24 +1,43 @@
 //
 //  LoggingApplicationDelegate.swift
-//  Tamaggo
+//  LoggerWrapper
 //
-//  Created by Stéphane Copin on 5/15/17.
-//  Copyright © 2017 Stephane Copin. All rights reserved.
+//  Created by Stephane Copin on 11/7/16.
+//  Copyright © 2016 Stephane Copin. All rights reserved.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHSTCER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
-import UIKit
 import CocoaLumberjack
+import UIKit
 
 open class LoggingApplicationDelegate: NSObject, UIApplicationDelegate {
 	private var fileLogger: DDFileLogger!
 
 	public struct Configuration {
-		public var logLevel: STCLogLevel
-		public var hasLogFiles: Bool
-		public var logFileMaxSize: UInt64
-		public var logFileMaxNumber: UInt
+		public let logLevel: STCLogLevel
+		public let hasLogFiles: Bool
+		public let logFileMaxSize: UInt64
+		public let logFileMaxNumber: UInt
 
-		public init(logLevel: STCLogLevel = .all,
+		public init(
+			logLevel: STCLogLevel = .all,
 			hasLogFiles: Bool = true,
 			logFileMaxSize: UInt64 = 1024 * 1024,
 			logFileMaxNumber: UInt = 10)
@@ -36,13 +55,12 @@ open class LoggingApplicationDelegate: NSObject, UIApplicationDelegate {
 		self.configuration = configuration
 	}
 
-	open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+	open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
 		let logger = STCCocoaLumberjackLogger()
 		logger.logLevel = self.configuration.logLevel
 		Logger.shared = logger
 
-		DDLog.add(DDASLLogger.sharedInstance)
-		DDLog.add(DDTTYLogger.sharedInstance)
+		DDLog.add(DDOSLogger.sharedInstance)
 
 		if self.configuration.hasLogFiles {
 			self.fileLogger = DDFileLogger()
@@ -61,7 +79,9 @@ open class LoggingApplicationDelegate: NSObject, UIApplicationDelegate {
 
 	open func getLatestLogs(ofSize size: Int? = nil) -> String {
 		let description = NSMutableString()
-		for logFileInfo in self.fileLogger.logFileManager.sortedLogFileInfos.reversed() {
+		let sortedLogFileInfos = self.fileLogger.logFileManager.sortedLogFileInfos
+
+		for logFileInfo in sortedLogFileInfos.reversed() {
 			if let logData = FileManager.default.contents(atPath: logFileInfo.filePath), !logData.isEmpty,
 				let result = NSString(data: logData, encoding: String.Encoding.utf8.rawValue) as String? {
 				description.append(result)

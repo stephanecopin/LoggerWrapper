@@ -34,8 +34,8 @@
 @synthesize logLevel = _logLevel;
 
 + (void)initialize {
-  [DDASLLogger sharedInstance].logFormatter = [[STCCocoaLumberjackFormatter alloc] init];
-  [DDTTYLogger sharedInstance].logFormatter = [DDASLLogger sharedInstance].logFormatter;
+  [DDOSLogger sharedInstance].logFormatter = [[STCCocoaLumberjackFormatter alloc] init];
+  [DDTTYLogger sharedInstance].logFormatter = [DDOSLogger sharedInstance].logFormatter;
 }
 
 - (void)writeLog:(STCLogFlag)flag module:(NSString *)module file:(NSString *)file function:(NSString *)function line:(int)line message:(NSString *)message {

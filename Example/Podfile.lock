@@ -1,8 +1,8 @@
 PODS:
-  - CocoaLumberjack (3.5.3):
-    - CocoaLumberjack/Core (= 3.5.3)
-  - CocoaLumberjack/Core (3.5.3)
-  - CocoaLumberjack/Swift (3.5.3):
+  - CocoaLumberjack (3.6.2):
+    - CocoaLumberjack/Core (= 3.6.2)
+  - CocoaLumberjack/Core (3.6.2)
+  - CocoaLumberjack/Swift (3.6.2):
     - CocoaLumberjack/Core
   - LoggerWrapper/CocoaLumberjack (0.4):
     - LoggerWrapper/CocoaLumberjack/ApplicationDelegate (= 0.4)
@@ -24,7 +24,7 @@ DEPENDENCIES:
   - LoggerWrapper/CocoaLumberjack (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - CocoaLumberjack
 
 EXTERNAL SOURCES:
@@ -32,9 +32,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
-  LoggerWrapper: f27a494b75625c8bcaa3f4160373441e43e7d54e
+  CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
+  LoggerWrapper: 417cf4ae72b8fc2ad7632b9e914451dd203671f9
 
-PODFILE CHECKSUM: 0f0c3f83fb56cc4b5c86b10ed40414916a112c7f
+PODFILE CHECKSUM: 71b68a7db4702c0602419c3b760a762e18deb099
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.3
