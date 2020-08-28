@@ -5,3 +5,7 @@ use_frameworks!
 target 'LoggerWrapper_Example' do
 	pod 'LoggerWrapper/CocoaLumberjack', :path => '../'
 end
+
+target 'LoggerWrapper_Example-macOS' do
+	pod 'LoggerWrapper/CocoaLumberjack', :path => '../'
+end

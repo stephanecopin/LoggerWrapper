@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17A7381C4C2962E099460CD8 /* Pods_LoggerWrapper_Example_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E52C38D9258B41728162C7AA /* Pods_LoggerWrapper_Example_macOS.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		B9515FB43EAD32B005F48A5C /* Pods_LoggerWrapper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43073DD2E4BA849C49F036BA /* Pods_LoggerWrapper_Example.framework */; };
+		F488A05924F95FB100676AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488A05824F95FB100676AE8 /* AppDelegate.swift */; };
+		F488A05B24F95FB100676AE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F488A05A24F95FB100676AE8 /* ViewController.swift */; };
+		F488A05D24F95FB100676AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F488A05C24F95FB100676AE8 /* Assets.xcassets */; };
+		F488A06024F95FB100676AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F488A05E24F95FB100676AE8 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09DA9B86BF42287CEA38EEAF /* Pods-LoggerWrapper_Example-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggerWrapper_Example-macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoggerWrapper_Example-macOS/Pods-LoggerWrapper_Example-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		140321029580029C9FE2D33F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		1FB15E3F7D9BF8A6C945241B /* Pods-LoggerWrapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggerWrapper_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoggerWrapper_Tests/Pods-LoggerWrapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		277C700D14F50AD910B32D97 /* Pods-LoggerWrapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggerWrapper_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoggerWrapper_Example/Pods-LoggerWrapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3AA90F30FF070793E91FBDFC /* Pods-LoggerWrapper_Example-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggerWrapper_Example-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoggerWrapper_Example-macOS/Pods-LoggerWrapper_Example-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		43073DD2E4BA849C49F036BA /* Pods_LoggerWrapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggerWrapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBA986334559392A74443B1 /* LoggerWrapper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LoggerWrapper.podspec; path = ../LoggerWrapper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* LoggerWrapper_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoggerWrapper_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,9 +35,16 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		77571930051CF9B61DD78EA9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		87D3222706D85A117A8DAECA /* Pods-LoggerWrapper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggerWrapper_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoggerWrapper_Tests/Pods-LoggerWrapper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9D51E4C8F58125C20094DFBD /* Pods-LoggerWrapper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggerWrapper_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoggerWrapper_Example/Pods-LoggerWrapper_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D191267CCAD16A56D35BE55C /* Pods_LoggerWrapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggerWrapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52C38D9258B41728162C7AA /* Pods_LoggerWrapper_Example_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggerWrapper_Example_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F488A05624F95FB100676AE8 /* LoggerWrapper_Example-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LoggerWrapper_Example-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F488A05824F95FB100676AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F488A05A24F95FB100676AE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F488A05C24F95FB100676AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F488A05F24F95FB100676AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F488A06124F95FB100676AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F488A06224F95FB100676AE8 /* LoggerWrapper_Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoggerWrapper_Example_macOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +56,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F488A05324F95FB100676AE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A7381C4C2962E099460CD8 /* Pods_LoggerWrapper_Example_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -51,8 +72,8 @@
 			children = (
 				277C700D14F50AD910B32D97 /* Pods-LoggerWrapper_Example.debug.xcconfig */,
 				9D51E4C8F58125C20094DFBD /* Pods-LoggerWrapper_Example.release.xcconfig */,
-				1FB15E3F7D9BF8A6C945241B /* Pods-LoggerWrapper_Tests.debug.xcconfig */,
-				87D3222706D85A117A8DAECA /* Pods-LoggerWrapper_Tests.release.xcconfig */,
+				3AA90F30FF070793E91FBDFC /* Pods-LoggerWrapper_Example-macOS.debug.xcconfig */,
+				09DA9B86BF42287CEA38EEAF /* Pods-LoggerWrapper_Example-macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -61,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for LoggerWrapper */,
+				607FACD21AFB9204008FA782 /* LoggerWrapper_Example (iOS) */,
+				F488A05724F95FB100676AE8 /* LoggerWrapper_Example (macOS) */,
 				607FACD11AFB9204008FA782 /* Products */,
 				2E283A7908AE4FAA6B7CAC64 /* Pods */,
 				7A829B6D1D88AE80511F826D /* Frameworks */,
@@ -72,11 +94,12 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* LoggerWrapper_Example.app */,
+				F488A05624F95FB100676AE8 /* LoggerWrapper_Example-macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for LoggerWrapper */ = {
+		607FACD21AFB9204008FA782 /* LoggerWrapper_Example (iOS) */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -86,7 +109,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for LoggerWrapper";
+			name = "LoggerWrapper_Example (iOS)";
 			path = LoggerWrapper;
 			sourceTree = "<group>";
 		};
@@ -113,8 +136,22 @@
 			children = (
 				43073DD2E4BA849C49F036BA /* Pods_LoggerWrapper_Example.framework */,
 				D191267CCAD16A56D35BE55C /* Pods_LoggerWrapper_Tests.framework */,
+				E52C38D9258B41728162C7AA /* Pods_LoggerWrapper_Example_macOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F488A05724F95FB100676AE8 /* LoggerWrapper_Example (macOS) */ = {
+			isa = PBXGroup;
+			children = (
+				F488A05824F95FB100676AE8 /* AppDelegate.swift */,
+				F488A05A24F95FB100676AE8 /* ViewController.swift */,
+				F488A05C24F95FB100676AE8 /* Assets.xcassets */,
+				F488A05E24F95FB100676AE8 /* Main.storyboard */,
+				F488A06124F95FB100676AE8 /* Info.plist */,
+				F488A06224F95FB100676AE8 /* LoggerWrapper_Example_macOS.entitlements */,
+			);
+			path = "LoggerWrapper_Example (macOS)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,13 +176,32 @@
 			productReference = 607FACD01AFB9204008FA782 /* LoggerWrapper_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F488A05524F95FB100676AE8 /* LoggerWrapper_Example-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F488A06524F95FB100676AE8 /* Build configuration list for PBXNativeTarget "LoggerWrapper_Example-macOS" */;
+			buildPhases = (
+				DAC6D5ACC866BA4E5110D93B /* [CP] Check Pods Manifest.lock */,
+				F488A05224F95FB100676AE8 /* Sources */,
+				F488A05324F95FB100676AE8 /* Frameworks */,
+				F488A05424F95FB100676AE8 /* Resources */,
+				EBD5F85E45346640BE13A9D7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LoggerWrapper_Example-macOS";
+			productName = "LoggerWrapper_Example-macOS";
+			productReference = F488A05624F95FB100676AE8 /* LoggerWrapper_Example-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -153,6 +209,11 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 2GVJ6JS822;
 						LastSwiftMigration = 1000;
+					};
+					F488A05524F95FB100676AE8 = {
+						CreatedOnToolsVersion = 12.0;
+						DevelopmentTeam = 2GVJ6JS822;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -171,6 +232,7 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* LoggerWrapper_Example */,
+				F488A05524F95FB100676AE8 /* LoggerWrapper_Example-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +245,15 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F488A05424F95FB100676AE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F488A05D24F95FB100676AE8 /* Assets.xcassets in Resources */,
+				F488A06024F95FB100676AE8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +298,48 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoggerWrapper_Example/Pods-LoggerWrapper_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DAC6D5ACC866BA4E5110D93B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoggerWrapper_Example-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBD5F85E45346640BE13A9D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoggerWrapper_Example-macOS/Pods-LoggerWrapper_Example-macOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/LoggerWrapper/LoggerWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LoggerWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoggerWrapper_Example-macOS/Pods-LoggerWrapper_Example-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -236,6 +349,15 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F488A05224F95FB100676AE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F488A05B24F95FB100676AE8 /* ViewController.swift in Sources */,
+				F488A05924F95FB100676AE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +378,14 @@
 				607FACDF1AFB9204008FA782 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		F488A05E24F95FB100676AE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F488A05F24F95FB100676AE8 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -398,6 +528,69 @@
 			};
 			name = Release;
 		};
+		F488A06324F95FB100676AE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA90F30FF070793E91FBDFC /* Pods-LoggerWrapper_Example-macOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "LoggerWrapper_Example (macOS)/LoggerWrapper_Example_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2GVJ6JS822;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "LoggerWrapper_Example (macOS)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fueled.LoggerWrapper-Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F488A06424F95FB100676AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09DA9B86BF42287CEA38EEAF /* Pods-LoggerWrapper_Example-macOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "LoggerWrapper_Example (macOS)/LoggerWrapper_Example_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2GVJ6JS822;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "LoggerWrapper_Example (macOS)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fueled.LoggerWrapper-Example-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,6 +608,15 @@
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
 				607FACF11AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F488A06524F95FB100676AE8 /* Build configuration list for PBXNativeTarget "LoggerWrapper_Example-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F488A06324F95FB100676AE8 /* Debug */,
+				F488A06424F95FB100676AE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

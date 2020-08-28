@@ -25,9 +25,17 @@
 //
 
 import CocoaLumberjack
+#if canImport(UIKit)
 import UIKit
 
-open class LoggingApplicationDelegate: NSObject, UIApplicationDelegate {
+public typealias ApplicationDelegate = UIApplicationDelegate
+#elseif canImport(AppKit)
+import AppKit
+
+public typealias ApplicationDelegate = NSApplicationDelegate
+#endif
+
+open class LoggingApplicationDelegate: NSObject, ApplicationDelegate {
 	private var fileLogger: DDFileLogger!
 
 	public struct Configuration {
@@ -55,7 +63,19 @@ open class LoggingApplicationDelegate: NSObject, UIApplicationDelegate {
 		self.configuration = configuration
 	}
 
+	#if canImport(UIKit)
 	open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+		self.applicationDidFinishLaunching()
+
+		return false
+	}
+	#elseif canImport(AppKit)
+	open func applicationDidFinishLaunching(_ aNotification: Notification) {
+		self.applicationDidFinishLaunching()
+	}
+	#endif
+
+	private func applicationDidFinishLaunching() {
 		let logger = STCCocoaLumberjackLogger()
 		logger.logLevel = self.configuration.logLevel
 		Logger.shared = logger
@@ -71,8 +91,6 @@ open class LoggingApplicationDelegate: NSObject, UIApplicationDelegate {
 		}
 
 		LogInfo("Logging has been setup")
-
-		return false
 	}
 
 	// MARK: - Helper methods
